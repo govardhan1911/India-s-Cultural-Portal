@@ -1,0 +1,455 @@
+.india-map-section {
+    padding: 120px 5%;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(245,158,11,0.08),
+            transparent 30%
+        ),
+        #faf7f2;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #d97706;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    margin-top: 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    color: #3d2a1e;
+}
+
+.section-heading p {
+    margin-top: 15px;
+
+    color: #777;
+
+    line-height: 1.8;
+}
+
+.india-map-layout {
+    width: min(1250px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.8fr)
+        minmax(400px, 1.2fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.map-visual {
+    min-height: 560px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf3,
+            #f4e6d2
+        );
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(100,60,20,0.1);
+}
+
+.map-glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(245,158,11,0.12);
+
+    filter: blur(50px);
+
+    animation: mapGlow 4s ease-in-out infinite;
+}
+
+.india-symbol {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    animation: indiaFloat 5s ease-in-out infinite;
+}
+
+.india-shape {
+    width: 220px;
+    height: 320px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e67e22,
+            #d35400
+        );
+
+    clip-path: polygon(
+        42% 0%,
+        58% 5%,
+        63% 17%,
+        73% 25%,
+        68% 38%,
+        78% 48%,
+        70% 59%,
+        61% 67%,
+        58% 79%,
+        50% 100%,
+        42% 87%,
+        34% 73%,
+        27% 62%,
+        16% 53%,
+        24% 43%,
+        19% 32%,
+        31% 23%,
+        32% 10%
+    );
+
+    filter:
+        drop-shadow(
+            0 15px 20px
+            rgba(150,70,10,0.25)
+        );
+
+    animation: mapPulse 3s ease-in-out infinite;
+}
+
+.map-point {
+    position: absolute;
+
+    color: #fff;
+
+    animation:
+        starPulse 2s ease-in-out infinite;
+}
+
+.point-1 {
+    top: 22%;
+    left: 46%;
+}
+
+.point-2 {
+    top: 38%;
+    left: 58%;
+}
+
+.point-3 {
+    top: 51%;
+    left: 37%;
+}
+
+.point-4 {
+    top: 64%;
+    left: 51%;
+}
+
+.point-5 {
+    top: 76%;
+    left: 45%;
+}
+
+.map-label {
+    margin-top: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    color: #8b4513;
+}
+
+.map-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(217,119,6,0.18);
+
+    border-radius: 50%;
+
+    animation: orbitRotate 15s linear infinite;
+}
+
+.orbit-one {
+    width: 420px;
+    height: 230px;
+}
+
+.orbit-two {
+    width: 300px;
+    height: 500px;
+
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.states-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    max-height: 650px;
+
+    overflow-y: auto;
+
+    padding-right: 10px;
+}
+
+.states-grid::-webkit-scrollbar {
+    width: 5px;
+}
+
+.states-grid::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 10px;
+}
+
+.section-message,
+.section-error,
+.empty-state {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+}
+
+.section-error {
+    color: #b91c1c;
+}
+
+.state-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.65);
+
+    backdrop-filter: blur(8px);
+
+    animation: modalFade 0.3s ease;
+}
+
+.state-modal-content {
+    position: relative;
+
+    width: min(500px, 90%);
+
+    padding: 55px 40px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    animation: modalUp 0.5s ease;
+}
+
+.state-modal-content span {
+    color: #d97706;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.state-modal-content h2 {
+    margin: 10px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 50px;
+
+    color: #3d2a1e;
+}
+
+.state-modal-content p {
+    color: #777;
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f5eee5;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+@keyframes indiaFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes mapGlow {
+
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+}
+
+@keyframes mapPulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+}
+
+@keyframes starPulse {
+
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+}
+
+@keyframes orbitRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes modalFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes modalUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .india-map-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .map-visual {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .states-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .india-shape {
+        width: 170px;
+        height: 250px;
+    }
+}

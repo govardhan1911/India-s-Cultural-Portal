@@ -1,0 +1,111 @@
+.tourism-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    border: 1px solid #eee7df;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.tourism-card:hover {
+    transform: translateX(8px);
+
+    box-shadow:
+        0 20px 40px rgba(100,50,10,0.1);
+}
+
+.tourism-number {
+    position: absolute;
+
+    top: 10px;
+    right: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 70px;
+
+    color: rgba(217,119,6,0.06);
+}
+
+.tourism-icon {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8efe4;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+
+    transition: 0.4s ease;
+}
+
+.tourism-card:hover .tourism-icon {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+.tourism-content {
+    flex: 1;
+}
+
+.tourism-content span {
+    color: #d97706;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+.tourism-content h3 {
+    margin: 5px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+
+    color: #3d2a1e;
+}
+
+.tourism-content p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.tourism-arrow {
+    font-size: 28px;
+
+    color: #c9b7a3;
+
+    transition: 0.4s ease;
+}
+
+.tourism-card:hover .tourism-arrow {
+    color: #d97706;
+
+    transform: translateX(7px);
+}

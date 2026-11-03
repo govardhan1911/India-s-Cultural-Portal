@@ -1,0 +1,336 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #eee;
+    min-height: 75px;
+    z-index: 1000;
+}
+
+/* ================================
+   CONTAINER
+================================ */
+
+.navbar-custom .container {
+    max-width: 1400px;
+}
+
+/* ================================
+   LOGO / BRAND
+================================ */
+
+.brand-custom {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.brand-custom:hover {
+    transform: translateY(-1px);
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.brand-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #8b2c2c;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar-custom .navbar-nav {
+    gap: 5px;
+}
+
+.nav-link-custom {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    padding: 10px 14px !important;
+    margin: 0 2px;
+    color: #444 !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Icons */
+
+.nav-link-custom svg {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover */
+
+.nav-link-custom:hover {
+    color: #c75b12 !important;
+    background-color: #fff5eb;
+}
+
+.nav-link-custom:hover svg {
+    transform: translateY(-2px);
+}
+
+/* Active */
+
+.nav-link-custom.active-link {
+    color: #c75b12 !important;
+    font-weight: 600;
+    background-color: #fff3e6;
+}
+
+/* Active bottom line */
+
+.nav-link-custom.active-link::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 3px;
+    height: 2px;
+    background: #c75b12;
+    border-radius: 10px;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-group {
+    width: 220px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-group:focus-within {
+    border-color: #c75b12;
+    box-shadow: 0 0 0 3px rgba(199, 91, 18, 0.12);
+}
+
+/* Search input */
+
+.search-input {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 9px 14px;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+/* Search button */
+
+.search-btn {
+    border: none !important;
+    background: #c75b12 !important;
+    color: white !important;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #a94708 !important;
+}
+
+.search-btn svg {
+    font-size: 15px;
+}
+
+/* ================================
+   ADMIN BUTTON
+================================ */
+
+.admin-btn {
+    border: 1px solid #8b2c2c !important;
+    color: #8b2c2c !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+    padding: 8px 14px !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    transition: all 0.3s ease !important;
+}
+
+.admin-btn:hover {
+    background: #8b2c2c !important;
+    color: white !important;
+    border-color: #8b2c2c !important;
+    transform: translateY(-1px);
+}
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+
+.login-btn {
+    border: none !important;
+    background: #c75b12 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 9px 17px !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+    transition: all 0.3s ease !important;
+}
+
+.login-btn:hover {
+    background: #a94708 !important;
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(199, 91, 18, 0.25);
+}
+
+/* ================================
+   MOBILE TOGGLE
+================================ */
+
+.navbar-custom .navbar-toggler {
+    border: 1px solid #ddd;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+.navbar-custom .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(199, 91, 18, 0.15);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1200px) {
+
+    .nav-link-custom {
+        padding: 9px 10px !important;
+        font-size: 0.88rem;
+    }
+
+    .search-group {
+        width: 180px;
+    }
+
+    .admin-btn,
+    .login-btn {
+        padding: 8px 11px !important;
+    }
+
+    .brand-text {
+        font-size: 1.15rem;
+    }
+
+    .logo-img {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 991px) {
+
+    .navbar-custom {
+        min-height: 68px;
+    }
+
+    .navbar-custom .navbar-collapse {
+        padding: 15px 0 10px;
+    }
+
+    .navbar-custom .navbar-nav {
+        width: 100%;
+        gap: 3px;
+        margin-bottom: 15px !important;
+    }
+
+    .nav-link-custom {
+        width: 100%;
+        padding: 11px 14px !important;
+        margin: 0;
+    }
+
+    .nav-link-custom.active-link::after {
+        display: none;
+    }
+
+    .nav-link-custom.active-link {
+        background: #fff3e6;
+        border-left: 3px solid #c75b12;
+    }
+
+    /* Search */
+
+    .navbar-custom form {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .search-group {
+        width: 100%;
+    }
+
+    /* Buttons */
+
+    .navbar-custom .d-flex.align-items-center.gap-2 {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .admin-btn,
+    .login-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px !important;
+    }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 576px) {
+
+    .navbar-custom .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brand-text {
+        font-size: 1.05rem;
+    }
+
+    .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-link-custom {
+        font-size: 0.9rem;
+    }
+}

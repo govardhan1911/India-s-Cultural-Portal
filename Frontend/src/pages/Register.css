@@ -1,0 +1,171 @@
+.register-page {
+  min-height: 100vh;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #fff8ed,
+    #ffffff,
+    #fff1dc
+  );
+}
+
+.register-card {
+  border: none !important;
+  border-radius: 25px !important;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+  animation: registerCard 0.8s ease;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes registerCard {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-header {
+  text-align: center;
+  padding: 35px 20px 20px;
+}
+
+.register-logo {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  font-size: 35px;
+  animation: logoFloat 3s infinite ease-in-out;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.register-header h1 {
+  margin-top: 15px;
+  font-weight: 800;
+  color: #172b4d;
+}
+
+.register-header p {
+  color: #777;
+}
+
+.register-title {
+  text-align: center;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+.register-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.register-card .form-control {
+  border-radius: 12px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.register-card .form-control:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 0.2rem rgba(255, 122, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.register-button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  transition: 0.3s;
+}
+
+.register-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 122, 0, 0.3);
+}
+
+.register-login {
+  text-align: center;
+  margin-top: 25px;
+  color: #777;
+}
+
+.register-login a {
+  margin-left: 7px;
+  font-weight: 700;
+  color: #ff7a00;
+  text-decoration: none;
+}
+
+.register-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: circleMove 7s infinite alternate ease-in-out;
+}
+
+.circle-one {
+  width: 250px;
+  height: 250px;
+  background: #ff7a00;
+  top: -100px;
+  left: -80px;
+}
+
+.circle-two {
+  width: 350px;
+  height: 350px;
+  background: #ffc107;
+  right: -150px;
+  bottom: -150px;
+  animation-delay: 1s;
+}
+
+.circle-three {
+  width: 120px;
+  height: 120px;
+  background: #ff5722;
+  right: 15%;
+  top: 10%;
+}
+
+@keyframes circleMove {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(30px, 30px);
+  }
+}

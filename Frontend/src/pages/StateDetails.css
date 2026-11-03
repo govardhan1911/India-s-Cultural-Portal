@@ -1,0 +1,1093 @@
+/* =========================================================
+   SANSKRITI BHARAT - STATE DETAILS
+   Fully Animated CSS
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.state-details-page {
+    min-height: 100vh;
+    padding: 110px 7% 80px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 153, 51, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255, 193, 7, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fffaf3,
+            #ffffff,
+            #fff5e8
+        );
+
+    animation: pageFadeIn 1s ease forwards;
+}
+
+
+/* =========================
+   ANIMATED BACKGROUND
+   ========================= */
+
+.state-details-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    top: -180px;
+    left: -150px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 126, 0, 0.18),
+            rgba(255, 193, 7, 0.05)
+        );
+
+    filter: blur(2px);
+
+    animation:
+        backgroundFloatOne 10s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+.state-details-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    right: -130px;
+    bottom: -120px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 126, 0, 0.15),
+            rgba(255, 193, 7, 0.08)
+        );
+
+    animation:
+        backgroundFloatTwo 12s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+@keyframes backgroundFloatOne {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(40px, 30px) scale(1.08);
+    }
+
+    100% {
+        transform: translate(80px, 10px) scale(1.15);
+    }
+
+}
+
+
+@keyframes backgroundFloatTwo {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-40px, -30px) scale(1.08);
+    }
+
+    100% {
+        transform: translate(-70px, 10px) scale(1.15);
+    }
+
+}
+
+
+/* =========================
+   PAGE ENTRANCE
+   ========================= */
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.state-details-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+    animation:
+        headerAppear 1s ease forwards;
+
+}
+
+
+@keyframes headerAppear {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(-40px)
+            scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   SMALL TITLE
+   ========================= */
+
+.state-details-header span {
+
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 126, 0, 0.1);
+
+    color: #ff7a00;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    border: 1px solid
+        rgba(255, 126, 0, 0.2);
+
+    animation:
+        badgeAnimation 1.2s ease forwards;
+
+}
+
+
+@keyframes badgeAnimation {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px)
+            scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   STATE NAME
+   ========================= */
+
+.state-details-header h1 {
+
+    margin: 0;
+
+    font-size: clamp(
+        42px,
+        6vw,
+        75px
+    );
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: #172b4d;
+
+    background:
+        linear-gradient(
+            90deg,
+            #172b4d,
+            #ff7a00,
+            #172b4d
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        titleGradient 5s linear infinite,
+        titleAppear 1s ease forwards;
+
+}
+
+
+@keyframes titleGradient {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+
+}
+
+
+@keyframes titleAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   CAPITAL
+   ========================= */
+
+.state-details-header p {
+
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    color: #777;
+
+    animation:
+        capitalAppear 1.3s ease forwards;
+
+}
+
+
+@keyframes capitalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   CATEGORY GRID
+   ========================= */
+
+.state-categories {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    perspective: 1200px;
+
+}
+
+
+/* =========================
+   CATEGORY CARD
+   ========================= */
+
+.state-category {
+
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border: 1px solid
+        rgba(255, 126, 0, 0.12);
+
+    box-shadow:
+        0 15px 40px
+        rgba(23, 43, 77, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    overflow: hidden;
+
+    transform-style: preserve-3d;
+
+    opacity: 0;
+
+    animation:
+        cardAppear 0.8s ease forwards;
+
+    transition:
+        transform 0.45s cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        ),
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+
+}
+
+
+/* =========================
+   CARD STAGGER
+   ========================= */
+
+.state-category:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.state-category:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.state-category:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.state-category:nth-child(4) {
+    animation-delay: 0.65s;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(60px)
+            rotateX(15deg)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            rotateX(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   CARD SHIMMER
+   ========================= */
+
+.state-category::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: 0.8s;
+
+}
+
+
+.state-category:hover::before {
+
+    left: 140%;
+
+}
+
+
+/* =========================
+   CARD GLOW
+   ========================= */
+
+.state-category::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    right: -70px;
+    bottom: -70px;
+
+    background:
+        rgba(255, 126, 0, 0.08);
+
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease;
+
+}
+
+
+.state-category:hover::after {
+
+    transform: scale(2);
+
+    background:
+        rgba(255, 126, 0, 0.13);
+
+}
+
+
+/* =========================
+   CARD HOVER
+   ========================= */
+
+.state-category:hover {
+
+    transform:
+        translateY(-15px)
+        rotateX(3deg)
+        rotateY(-3deg)
+        scale(1.02);
+
+    border-color:
+        rgba(255, 126, 0, 0.35);
+
+    box-shadow:
+        0 30px 65px
+        rgba(23, 43, 77, 0.15),
+        0 0 35px
+        rgba(255, 126, 0, 0.08);
+
+}
+
+
+/* =========================
+   ICON
+   ========================= */
+
+.category-icon {
+
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1df,
+            #ffffff
+        );
+
+    border: 1px solid
+        rgba(255, 126, 0, 0.18);
+
+    box-shadow:
+        0 10px 25px
+        rgba(255, 126, 0, 0.12);
+
+    position: relative;
+
+    z-index: 2;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+
+    animation:
+        iconFloat 4s ease-in-out infinite;
+
+}
+
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+.state-category:hover .category-icon {
+
+    transform:
+        translateY(-10px)
+        rotate(8deg)
+        scale(1.12);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255, 126, 0, 0.22);
+
+}
+
+
+/* =========================
+   CARD TITLE
+   ========================= */
+
+.state-category h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    color: #172b4d;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.state-category:hover h2 {
+
+    color: #ff7a00;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================
+   CARD DESCRIPTION
+   ========================= */
+
+.state-category p {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 230px;
+
+    margin: 0;
+
+    color: #777;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.state-category:hover p {
+
+    color: #555;
+
+}
+
+
+/* =========================
+   CARD CLICK EFFECT
+   ========================= */
+
+.state-category:active {
+
+    transform:
+        translateY(-5px)
+        scale(0.98);
+
+}
+
+
+/* =========================
+   FOCUS ACCESSIBILITY
+   ========================= */
+
+.state-category:focus-visible {
+
+    outline: 3px solid
+        rgba(255, 126, 0, 0.4);
+
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.state-page-message {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf3,
+            #ffffff
+        );
+
+    color: #172b4d;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    animation:
+        messageAppear 0.6s ease;
+
+}
+
+
+/* =========================
+   LOADING SPINNER
+   ========================= */
+
+.state-page-message:not(.error)::before {
+
+    content: "";
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    border: 5px solid
+        rgba(255, 126, 0, 0.15);
+
+    border-top-color:
+        #ff7a00;
+
+    animation:
+        stateSpinner 0.8s linear infinite;
+
+}
+
+
+@keyframes stateSpinner {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   ERROR
+   ========================= */
+
+.state-page-message.error {
+
+    color: #dc3545;
+
+    animation:
+        errorShake 0.5s ease;
+
+}
+
+
+.state-page-message.error::before {
+
+    content: "⚠️";
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+    animation:
+        warningPulse 1.5s infinite;
+
+}
+
+
+@keyframes errorShake {
+
+    0% {
+        transform: translateX(-10px);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-7px);
+    }
+
+    75% {
+        transform: translateX(7px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes warningPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+@keyframes messageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* =========================
+   LARGE TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .state-details-page {
+
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+
+    .state-categories {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        max-width: 800px;
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .state-details-page {
+
+        padding-top: 100px;
+        padding-bottom: 60px;
+
+    }
+
+    .state-details-header {
+
+        margin-bottom: 45px;
+
+    }
+
+    .state-details-header h1 {
+
+        font-size: 48px;
+
+    }
+
+    .state-categories {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+
+    }
+
+    .state-category {
+
+        min-height: 280px;
+
+        padding: 25px 18px;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 576px) {
+
+    .state-details-page {
+
+        padding:
+            90px
+            20px
+            50px;
+
+    }
+
+    .state-details-header {
+
+        margin-bottom: 40px;
+
+    }
+
+    .state-details-header span {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        padding:
+            7px
+            14px;
+
+    }
+
+    .state-details-header h1 {
+
+        font-size: 42px;
+
+        letter-spacing: -1px;
+
+    }
+
+    .state-details-header p {
+
+        font-size: 15px;
+
+    }
+
+    .state-categories {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+    .state-category {
+
+        min-height: 260px;
+
+        padding: 30px 20px;
+
+    }
+
+    .category-icon {
+
+        width: 75px;
+        height: 75px;
+
+        font-size: 34px;
+
+    }
+
+    .state-category h2 {
+
+        font-size: 22px;
+
+    }
+
+    .state-category p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCE MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+}
